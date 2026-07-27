@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // return const Placeholder();
     return Scaffold(
-      appBar: AppBar(title: const Text('Sample Code')),
+      appBar: AppBar(title: const Text('플러터 레이아웃')),
       body: Container(
         color: Colors.lightGreenAccent, // child가 있는 경우, 자식 크기에 딱 맞춰서 줄어듦.
         // height: 300,
