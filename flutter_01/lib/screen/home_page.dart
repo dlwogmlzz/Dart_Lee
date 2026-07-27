@@ -54,6 +54,7 @@ Column _getColumnBody() {
       _getBox(width: 300, height: 100),
       // _getBox(width: 200, height: 200),
       const SizedBox(height: 50),
+      // Container(height: 50,)
       Expanded(flex: 2, child: _getBox(width: 200, height: 200)),
       Flexible(flex: 1, fit: FlexFit.tight, child: _getBox()),
       // _getBox(), // Expanded Widget // 가로로 꽉 채우줌.

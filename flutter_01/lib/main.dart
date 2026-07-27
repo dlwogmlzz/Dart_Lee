@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_01/screen/home_page.dart';
+import 'package:flutter_01/missions/first_mission_page.dart';
+// import 'package:flutter_01/screen/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Layout',
+      title: 'Flutter Widget',
+      debugShowCheckedModeBanner:
+          false, // debugShowCheckedModeBanner - 화면 debug 없앰.
       theme: ThemeData(
+        scaffoldBackgroundColor:
+            Colors.white, // scaffoldBackgroundColor - 앱 배경화면 색 변경.
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -31,7 +36,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomePage(),
+      home: const FirstMissionPage(),
     );
   }
 }
