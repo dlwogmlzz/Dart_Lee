@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text('受信データ: $resultFromDetail'),
-                  action: SnackBarAction(label: 'Action', onPressed: () {}),
+                  action: SnackBarAction(label: 'OK', onPressed: () {}),
                 ),
               );
             },
@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
               print('その他..');
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: const Text('빡코딩하자진짜로'),
+                  content: const Text('Difficult Dart & Flutter'),
                   action: SnackBarAction(label: 'Action', onPressed: () {}),
                 ),
               );
@@ -91,8 +91,24 @@ class HomePage extends StatelessWidget {
         // 검색창을 눌러놓은 상태(검색창이 포커스)에서 스크롤을 할 경우, 포커스가 사라짐.
         child: NotificationListener<ScrollNotification>(
           // ScrollNotification을 통해서 받을 수 있는 기능.
+          // onNotification: (event) {
+          //   print(event.metrics.axisDirection);
           onNotification: (event) {
-            print(event.metrics.axisDirection);
+            if (event is ScrollUpdateNotification) {
+              if (event.metrics.axis == Axis.vertical) {
+                if (event.scrollDelta! > 0) {
+                  print('Drag Down');
+                } else if (event.scrollDelta! < 0) {
+                  print('Drag Up');
+                }
+              } else {
+                if (event.scrollDelta! > 0) {
+                  print('Drag Right');
+                } else if (event.scrollDelta! < 0) {
+                  print('Drag Left');
+                }
+              }
+            }
 
             if (focusNode.hasFocus) {
               // 만약에 focusNode가 포커스 되어있다면, 포커스를 해지해라.
@@ -107,7 +123,7 @@ class HomePage extends StatelessWidget {
                 height: 250,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
-                  children: List.generate(20, (index) {
+                  children: List.generate(50, (index) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       // child: Container(width: 80, color: Colors.cyan),
@@ -116,7 +132,7 @@ class HomePage extends StatelessWidget {
                   }),
                 ),
               ),
-              ...List.generate(20, (index) {
+              ...List.generate(50, (index) {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: YoutubeVerticalItem(height: 200, imgUrl: imgUrl),

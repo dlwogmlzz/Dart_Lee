@@ -64,7 +64,7 @@ class _SearchResultPageState extends State<SearchResultPage> {
                 onPressed: () {
                   Navigator.pop(context, count);
                 },
-                child: Text("閉じる"),
+                child: Text("送信"),
               ),
             ],
           ),
