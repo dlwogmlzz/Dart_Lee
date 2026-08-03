@@ -15,7 +15,7 @@ void main() {
   String? myName = null;
   int? nameLength = myName?.length; // myName의 길이(length)를 알고 싶을때, 위에서 옵셔널을 사용했기 때문에 똑같이 옵셔널을 써야함.
   // 그리고 length는 본래 int기 때문에 int 변수에 담아줘야 함.
-  bool? isNameCountOdd = myName?.length?.isOdd; // isOdd 홀수 인지 확인.
+  bool? isNameCountOdd = myName?.length.isOdd; // isOdd 홀수 인지 확인.
   String? secondName = null;
   String? thirdName = null;
   String? fourthName = "얍얍얍";

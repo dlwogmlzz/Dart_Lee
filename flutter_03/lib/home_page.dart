@@ -19,9 +19,9 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        leading: Icon(Icons.video_call), // video icon 추가
+        leading: Icon(Icons.video_call), // video icon追加
         title: TextField(
-          // 사용자가 입력한 input값이 들어옴.
+          // USERが入力したINPUTの値が入る。
           onChanged: (input) {
             searchTerm = input;
           },

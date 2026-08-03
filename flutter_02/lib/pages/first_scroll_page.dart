@@ -59,7 +59,7 @@ class FirstScrollPage extends StatelessWidget {
       }),
     );
 
-    Widget _getScrollBody() {
+    Widget getScrollBody() {
       return SingleChildScrollView(
         child: Column(
           spacing: 10,

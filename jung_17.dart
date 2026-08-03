@@ -1,6 +1,5 @@
 // getter(가져오는것) / setter(세팅하는것)
 
-import 'jung_05.dart';
 
 void main() {
   var myCat = Cat(name: "아오잉", age: 2);

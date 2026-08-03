@@ -12,8 +12,8 @@ void main() {
   var newNumbers = [
     ...numbers,
     ?myNum,
-    ?optionNum,
-    ...?counts,
+    optionNum,
+    ...counts,
     ...?optionalCounts,
   ]; // ...?counts - counts가 있으면 구조분해를 하면서 넣어주세요 라는 의미. optionalCounts는 null이라서 출력안됨.
 
