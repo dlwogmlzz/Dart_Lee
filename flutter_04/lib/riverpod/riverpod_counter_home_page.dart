@@ -57,6 +57,8 @@ class RiverpodCounterHomePage extends ConsumerWidget {
 }
 
 class ConsumerCounterText extends ConsumerWidget {
+  const ConsumerCounterText({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // ref - reference형태로 riverpod를 통해 접근할수 있는 것.

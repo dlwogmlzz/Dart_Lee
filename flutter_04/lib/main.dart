@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_04/bloc/bloc_counter_app.dart';
-import 'package:flutter_04/bloc/counter_bloc.dart';
-import 'package:flutter_04/riverpod/riverpod_counter_app.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   // State 기반
